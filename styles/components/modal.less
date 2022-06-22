@@ -1,0 +1,36 @@
+@import '../abstracts/variables.less';
+
+.ant-modal-confirm-body {
+  display: grid;
+}
+
+.ant-modal-confirm-title {
+  margin-top: 8px;
+}
+
+.ant-modal-confirm-body {
+  text-align: center;
+  justify-items: center;
+}
+
+.ant-modal-confirm-body
+  > .anticon
+  + .ant-modal-confirm-title
+  + .ant-modal-confirm-content {
+  margin-left: 0;
+}
+
+.ant-modal-confirm-body > .anticon {
+  font-size: 32px;
+  margin-right: 0;
+}
+
+.ant-modal-confirm .ant-modal-confirm-btns {
+  float: none;
+  width: 100%;
+  display: flex;
+}
+
+.ant-modal-confirm-btns .ant-btn {
+  flex: 1;
+}

@@ -1,0 +1,92 @@
+@import '../abstracts/variables.less';
+
+@section-step-height: 48px;
+
+.ant-steps-item {
+  &.ant-steps-item-active,
+  &.ant-steps-item-finish {
+    & > .ant-steps-item-container > .ant-steps-item-icon {
+      background-color: @primary-color;
+
+      .ant-steps-icon {
+        color: white;
+      }
+    }
+  }
+
+  &.ant-steps-item-wait {
+    & > .ant-steps-item-container > .ant-steps-item-icon {
+      background-color: @lms-secondary-100;
+
+      .ant-steps-icon {
+        color: @lms-secondary-300;
+        // color: white;
+      }
+    }
+  }
+}
+
+.ant-steps-vertical > .ant-steps-item > .ant-steps-item-container {
+  .ant-steps-item-icon {
+    width: @section-step-height;
+    height: @section-step-height;
+
+    .anticon {
+      vertical-align: middle;
+    }
+  }
+
+  .ant-steps-item-title {
+    height: @section-step-height;
+  }
+
+  .ant-steps-item-tail {
+    left: 22px !important;
+    padding: 38px 0px 0px !important;
+    z-index: -1;
+
+    &::after {
+      width: 4px !important;
+    }
+  }
+}
+
+.ant-steps-item-icon {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-steps-item-wait .ant-steps-item-icon {
+  background-color: @lms-secondary-100;
+  border: none;
+}
+
+.ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
+  color: @lms-secondary-300;
+}
+
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-tail::after {
+  background-color: @lms-secondary-100;
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-tail::after {
+  background-color: @lms-primary-500;
+}
+
+.ant-steps-vertical
+  > .ant-steps-item
+  > .ant-steps-item-container
+  .ant-steps-item-title {
+  display: flex;
+  align-items: center;
+}
+
+.ant-steps-item-description {
+  font-size: 20px;
+  color: @lms-secondary-300 !important;
+}
+
+.ant-steps-item-title {
+  color: @lms-secondary-900 !important;
+}

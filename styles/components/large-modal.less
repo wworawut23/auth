@@ -1,0 +1,48 @@
+@import '../abstracts/variables.less';
+
+.large-modal {
+  .ant-modal-confirm-body .ant-modal-confirm-title {
+    @media (min-width: 1024px) {
+      margin-bottom: 24px;
+    }
+    margin-bottom: 12px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .ant-modal-confirm-body .ant-modal-confirm-content {
+    @media (min-width: 1024px) {
+      margin-bottom: 64px;
+    }
+    font-size: 20px;
+    color: @lms-secondary-300;
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+  .ant-modal-body {
+    padding: 64px 60px !important;
+
+    @media (max-width: 424px) {
+      padding: 32px 30px !important;
+    }
+  }
+  .ant-modal-confirm-btns {
+    margin-top: 0;
+    font-size: 26px;
+
+    display: flex;
+    float: none;
+    width: 100%;
+
+    @media (max-width: 424px) {
+      flex-direction: column-reverse;
+
+      .ant-btn-primary {
+        margin-left: 0 !important;
+      }
+
+      .ant-btn + .ant-btn-primary {
+        margin-bottom: 8px !important;
+      }
+    }
+  }
+}
